@@ -1,6 +1,13 @@
 package br.com.edu.cachewithspringbootandredis.model;
 
-public class Product {
+import lombok.Builder;
+import lombok.Data;
+
+import java.io.Serializable;
+
+@Data
+@Builder
+public class Product implements Serializable {
 
     private String code;
 
@@ -8,21 +15,13 @@ public class Product {
 
     private String description;
 
+    public Product() {}
+
+
     public Product(String code,String name, String description) {
         this.code = code;
         this.name = name;
         this.description = description;
     }
 
-    public String getCode() {
-        return code;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
 }

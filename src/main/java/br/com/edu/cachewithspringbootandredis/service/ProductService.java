@@ -13,8 +13,14 @@ public class ProductService {
     @Cacheable("products")
     public List<Product> getAll() throws InterruptedException {
         Thread.sleep(3000);
-        List<Product> products = new ArrayList<>();
+        List<Product> products = createProducts();
         return products;
+    }
+
+    private List<Product> createProducts() {
+        Product celular = Product.builder().code("123abc321").name("Celular motorola").description("Celular super legal da motorola").build();
+        Product blusa = Product.builder().code("123abc321").name("Lacoste").description("Blusa super linda do jacarezinho").build();
+        return List.of(celular,blusa);
     }
 
 }
