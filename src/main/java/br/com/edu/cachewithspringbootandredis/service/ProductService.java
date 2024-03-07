@@ -19,7 +19,7 @@ public class ProductService {
 
     private List<Product> createProducts() {
         Product celular = Product.builder().code("123abc321").name("Celular motorola").description("Celular super legal da motorola").build();
-        Product blusa = Product.builder().code("123abc321").name("Lacoste").description("Blusa super linda do jacarezinho").build();
+        Product blusa = Product.builder().code("rte34llab").name("Lacoste").description("Blusa super linda do jacarezinho").build();
         return List.of(celular,blusa);
     }
 
